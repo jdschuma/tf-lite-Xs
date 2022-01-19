@@ -22,7 +22,7 @@ datasetEvaluation = object_detector.DataLoader(tfrecord_file_patten=filenameEval
 datasetTesting = object_detector.DataLoader(tfrecord_file_patten=filenameTest, size=14, label_map=["x"])
 
 spec = model_spec.get('efficientdet_lite0')
-model = object_detector.create(datasetTraining, model_spec=spec, batch_size=16, train_whole_model=True, epochs=1, validation_data=datasetEvaluation )
+model = object_detector.create(datasetTraining, model_spec=spec, batch_size=16, train_whole_model=True, epochs=50, validation_data=datasetEvaluation )
 model.evaluate(datasetTesting)
 model.export(export_dir=dirname, tflite_filename='Xs-50-lite0.tflite')
 
@@ -38,7 +38,7 @@ datasetEvaluation = object_detector.DataLoader(tfrecord_file_patten=filenameEval
 datasetTesting = object_detector.DataLoader(tfrecord_file_patten=filenameTest, size=14, label_map=["x"])
 
 spec = model_spec.get('efficientdet_lite0')
-model = object_detector.create(datasetTraining, model_spec=spec, batch_size=16, train_whole_model=True, epochs=1, validation_data=datasetEvaluation )
+model = object_detector.create(datasetTraining, model_spec=spec, batch_size=16, train_whole_model=True, epochs=50, validation_data=datasetEvaluation )
 model.evaluate(datasetTesting)
 model.export(export_dir=dirname, tflite_filename='Xs-50-lite0.tflite')
 
@@ -53,7 +53,7 @@ datasetEvaluation = object_detector.DataLoader(tfrecord_file_patten=filenameEval
 datasetTesting = object_detector.DataLoader(tfrecord_file_patten=filenameTest, size=14, label_map=["x"])
 
 spec = model_spec.get('efficientdet_lite1')
-model = object_detector.create(datasetTraining, model_spec=spec, batch_size=16, train_whole_model=True, epochs=1, validation_data=datasetEvaluation )
+model = object_detector.create(datasetTraining, model_spec=spec, batch_size=16, train_whole_model=True, epochs=50, validation_data=datasetEvaluation )
 model.evaluate(datasetTesting)
 model.export(export_dir=dirname, tflite_filename='Xs-50-lite1.tflite')
 
@@ -69,6 +69,6 @@ datasetEvaluation = object_detector.DataLoader(tfrecord_file_patten=filenameEval
 datasetTesting = object_detector.DataLoader(tfrecord_file_patten=filenameTest, size=14, label_map=["x"])
 
 spec = model_spec.get('efficientdet_lite1')
-model = object_detector.create(datasetTraining, model_spec=spec, batch_size=16, train_whole_model=True, epochs=1, validation_data=datasetEvaluation )
+model = object_detector.create(datasetTraining, model_spec=spec, batch_size=16, train_whole_model=True, epochs=50, validation_data=datasetEvaluation )
 model.evaluate(datasetTesting)
 model.export(export_dir=dirname, tflite_filename='Xs-50-lite1.tflite')
