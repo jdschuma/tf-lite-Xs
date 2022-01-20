@@ -15,7 +15,7 @@ print("Eager execution: {}".format(tf.executing_eagerly()))
 # Define a list of colors for visualization
 COLORS = np.random.randint(0, 255, size=(1, 3), dtype=np.uint8)
 
-INPUT_IMAGE_URL = "dataset/images/jpg/IMG_0865.jpg"
+INPUT_IMAGE_URL = "dataset/images/jpg/IMG_0918.jpg"
 DETECTION_THRESHOLD = 0.5
 
 def preprocess_image(image_path, input_size):
@@ -108,10 +108,7 @@ def run_odt_and_draw_results(image_path, interpreter, threshold=0.5):
   original_uint8 = original_image_np.astype(np.uint8)
   return original_uint8
 
-
-dirname= r'dataset/xs.v2-xs-nonoise.tfrecord/'
-
-filenameTrain = dirname + r'Xs.tflite'
+filenameTrain = r'dataset/xs.v2-xs-nonoise.tfrecord/Xs-50-lite1.tflite'
 
 # Load the TFLite model and allocate tensors.
 interpreter = tf.lite.Interpreter(model_path=filenameTrain)
