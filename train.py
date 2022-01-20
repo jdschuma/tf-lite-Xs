@@ -25,7 +25,20 @@ def train_variation(dirname, _model_name, epoch_count):
                                    validation_data=dataset_evaluation)
     model.evaluate(dataset_evaluation)
 
-    model.export(export_dir=dirname, tflite_filename='Xs-' + epoch_count + '-' + _model_name + '.tflite')
+    model.export(export_dir=dirname, tflite_filename='Xs-' + str(epoch_count) + '-' + _model_name + '.tflite')
 
 
-train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite0', 1)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite0', 10)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite0', 25)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite0', 50)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite0', 100)
+
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite1', 10)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite1', 25)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite1', 50)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite1', 100)
+
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite2', 10)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite2', 25)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite2', 50)
+train_variation(r'dataset/Xs.v1i.tfrecord/', 'efficientdet_lite2', 100)
